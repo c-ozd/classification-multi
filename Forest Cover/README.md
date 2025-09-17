@@ -12,16 +12,16 @@ The dataset comes from [Kaggle: Forest Cover Type Dataset](https://www.kaggle.co
 ## Methodology
 
 **<u>Data Investigation</u>**
-    - A mid-to-big sized imbalanced dataset $\longrightarrow$ Holdout CV with Stratification 
-    - Conversion of One Hot Encoded Soil_Type columns to One Single Soil_Type_Cat column (saving 40 columns $\longrightarrow$ reduced complexity)
-    - Soil Types, Wilderness Area and Elevation are determined to be the most important features as per Feature Importance graph of XGBoost which validates also early EDA work
+- A mid-to-big sized imbalanced dataset $\longrightarrow$ Holdout CV with Stratification 
+- Conversion of One Hot Encoded Soil_Type columns to One Single Soil_Type_Cat column (saving 40 columns $\longrightarrow$ reduced complexity)
+- Soil Types, Wilderness Area and Elevation are determined to be the most important features as per Feature Importance graph of XGBoost which validates also early EDA work
     
 **<u>Hyperparameter Tuning</u>**
-    - Optuna is used to find the optimal hyperparameters yielding the highest F1 Macro Scores
-    - Hyperparameter Tuning is performed on subsampled dataset (5% of the whole) to speed up the process
+- Optuna is used to find the optimal hyperparameters yielding the highest F1 Macro Scores
+- Hyperparameter Tuning is performed on subsampled dataset (5% of the whole) to speed up the process
 
 **<u>Model Training and Evaluation</u>**
-    - Models are scored based on **F1 Macro Averages**
+- Models are scored based on **F1 Macro Averages**
 
 
 **Models Trained and Evaluated**
